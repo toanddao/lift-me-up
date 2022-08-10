@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const App = () => {
+  const [bodyPart, setBodyPart] = useState('shoulders');
+  const [equipment, setEquipment] = useState('');
+  const [workoutList, setWorkoutList] = useState([]);
+  const [exerciseInfo, setExerciseInfo] = useState('');
 
 
 
   return (
     <div>
-      Lift Me Up!
+      <h1>
+        Lift Me Up!
+      </h1>
     </div>
   )
 }
