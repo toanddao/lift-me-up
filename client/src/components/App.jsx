@@ -42,6 +42,7 @@ const App = () => {
       <h1 onClick={checkState}>
         Lift Me Up!
       </h1>
+      <h2>My Workout</h2>
       <MuscleHeaders currentMuscle={currentMuscle} setCurrentMuscle={setCurrentMuscle}/>
       <ExerciseList exerciseList={exerciseList} />
     </div>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
+
+
 const ExerciseInfo = styled.div`
 position: relative;
 height: 400px;
@@ -13,7 +15,7 @@ box-shadow: 7px 7px 7px lightgray;
 margin-right: 15px;
 margin-left: 15px;
 margin-bottom: 30px;
-// border-radius: 10px;
+border-radius: 10px;
 `
 
 const Exercise = ({ exercise }) => {
@@ -25,6 +27,12 @@ const Exercise = ({ exercise }) => {
     <div>
       <ExerciseInfo>
         <div>{exercise.name}</div>
+        {/* <img src={exercise.gifUrl}></img> */}
+        <div>Target Muscle: {exercise.target}</div>
+        <img src="shoulders.png"></img>
+        <div>Equipment: {exercise.equipment}</div>
+        <button>Show Tutorial</button>
+        <button>Add to Workout</button>
       </ExerciseInfo>
     </div>
   )

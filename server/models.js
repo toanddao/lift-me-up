@@ -18,7 +18,7 @@ exports.save = (exercise) => {
 
 exports.getExercises = (muscle) => {
   return Exercise.find({bodyPart: muscle})
-  .limit(10)
+  .limit(12)
   .exec()
 }
 
