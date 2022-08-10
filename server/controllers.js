@@ -21,10 +21,11 @@ exports.saveExerciseInfo = (req, res) => {
 }
 
 exports.getExercises = (req, res) => {
-  let muscle = 'shoulders';
+  // console.log('req from client: ', req.query.bodyPart);
+  let muscle = req.query.bodyPart;
   models.getExercises(muscle)
   .then((response) => {
-    console.log('get exercise info :', response);
+    // console.log('get exercise info :', response);
     res.send(response);
   })
   .catch((error) => {
