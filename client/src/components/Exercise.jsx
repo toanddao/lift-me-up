@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-const RelatedItemsCard = styled.div`
+const ExerciseInfo = styled.div`
 position: relative;
 height: 400px;
 width: 270px;
@@ -23,9 +23,11 @@ const Exercise = ({ exercise }) => {
 
   return (
     <div>
-      <RelatedItemsCard>
-
-      </RelatedItemsCard>
+      <ExerciseInfo>
+        <div>{exercise.name}</div>
+      </ExerciseInfo>
     </div>
   )
 }
+
+export default Exercise;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Exercise from './Exercise.jsx';
 const axios = require('axios');
 
 const ExerciseList = ({ exerciseList }) => {
