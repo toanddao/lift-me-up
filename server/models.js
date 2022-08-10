@@ -22,7 +22,8 @@ exports.getExercises = (muscle) => {
   .exec()
 }
 
-
+// db.exercises.aggregate([{$match: {bodyPart:'chest'}}, { $sample: {size: 10}}])
+//  db.exercises.aggregate([{ $sample: {size: 10}}])
 
 
 // let randomExercise = (muscle) => {

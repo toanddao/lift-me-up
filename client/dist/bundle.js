@@ -420,7 +420,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ \"./node_modules/styled-components/dist/styled-components.browser.esm.js\");\n\n\nvar ExerciseInfo = styled_components__WEBPACK_IMPORTED_MODULE_1__[\"default\"].div.withConfig({\n  displayName: \"Exercise__ExerciseInfo\",\n  componentId: \"sc-1wmcwsa-0\"\n})([\"position:relative;height:400px;width:270px;display:block;align-items:center;border:2px solid lightgray;box-shadow:7px 7px 7px lightgray;margin-right:15px;margin-left:15px;margin-bottom:30px;border-radius:10px;\"]);\n\nvar Exercise = function Exercise(_ref) {\n  var exercise = _ref.exercise;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ExerciseInfo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, exercise.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"Target Muscle: \", exercise.target), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n    src: \"shoulders.png\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"Equipment: \", exercise.equipment), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", null, \"Show Tutorial\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", null, \"Add to Workout\")));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Exercise);\n\n//# sourceURL=webpack://fec/./client/src/components/Exercise.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! styled-components */ \"./node_modules/styled-components/dist/styled-components.browser.esm.js\");\n/* harmony import */ var _images_shoulders_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/shoulders.png */ \"./client/src/components/images/shoulders.png\");\n/* harmony import */ var _images_chest_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images/chest.png */ \"./client/src/components/images/chest.png\");\n/* harmony import */ var _images_glutes_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/glutes.png */ \"./client/src/components/images/glutes.png\");\n/* harmony import */ var _images_hamstrings_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./images/hamstrings.png */ \"./client/src/components/images/hamstrings.png\");\n/* harmony import */ var _images_lats_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./images/lats.png */ \"./client/src/components/images/lats.png\");\n/* harmony import */ var _images_quads_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./images/quads.png */ \"./client/src/components/images/quads.png\");\n/* harmony import */ var _images_traps_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./images/traps.png */ \"./client/src/components/images/traps.png\");\n/* harmony import */ var _images_triceps_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./images/triceps.png */ \"./client/src/components/images/triceps.png\");\n/* harmony import */ var _images_waist_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./images/waist.png */ \"./client/src/components/images/waist.png\");\n/* harmony import */ var _images_biceps_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./images/biceps.png */ \"./client/src/components/images/biceps.png\");\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar Exercise = function Exercise(_ref) {\n  var exercise = _ref.exercise;\n  var muscle;\n\n  if (exercise.bodyPart === 'chest') {\n    muscle = _images_chest_png__WEBPACK_IMPORTED_MODULE_2__[\"default\"];\n  } else if (exercise.bodyPart === 'shoulders') {\n    muscle = _images_shoulders_png__WEBPACK_IMPORTED_MODULE_1__[\"default\"];\n  } else if (exercise.target === 'biceps') {\n    muscle = _images_biceps_png__WEBPACK_IMPORTED_MODULE_10__[\"default\"];\n  } else if (exercise.target === 'triceps') {\n    muscle = _images_triceps_png__WEBPACK_IMPORTED_MODULE_8__[\"default\"];\n  } else if (exercise.target === 'hamstrings') {\n    muscle = _images_hamstrings_png__WEBPACK_IMPORTED_MODULE_4__[\"default\"];\n  } else if (exercise.target === 'glutes') {\n    muscle = _images_glutes_png__WEBPACK_IMPORTED_MODULE_3__[\"default\"];\n  } else if (exercise.target === 'quads' || exercise.target === 'adductors' || exercise.target === 'abductors') {\n    muscle = _images_quads_png__WEBPACK_IMPORTED_MODULE_6__[\"default\"];\n  } else if (exercise.bodyPart === 'waist') {\n    muscle = _images_waist_png__WEBPACK_IMPORTED_MODULE_9__[\"default\"];\n  } else if (exercise.target === 'lats') {\n    muscle = _images_lats_png__WEBPACK_IMPORTED_MODULE_5__[\"default\"];\n  } else if (exercise.target === 'upper back' || exercise.target === 'traps' || exercise.target === 'spine') {\n    muscle = _images_traps_png__WEBPACK_IMPORTED_MODULE_7__[\"default\"];\n  }\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ExerciseInfo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, exercise.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"Target Muscle: \", exercise.target), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Photo, {\n    src: muscle\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"Equipment: \", exercise.equipment), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", null, \"Show Tutorial\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", null, \"Add to Workout\")));\n};\n\nvar ExerciseInfo = styled_components__WEBPACK_IMPORTED_MODULE_11__[\"default\"].div.withConfig({\n  displayName: \"Exercise__ExerciseInfo\",\n  componentId: \"sc-1wmcwsa-0\"\n})([\"position:relative;height:400px;width:270px;display:block;align-items:center;border:2px solid lightgray;box-shadow:7px 7px 7px lightgray;margin-right:15px;margin-left:15px;margin-bottom:30px;border-radius:10px;\"]);\nvar Photo = styled_components__WEBPACK_IMPORTED_MODULE_11__[\"default\"].img.withConfig({\n  displayName: \"Exercise__Photo\",\n  componentId: \"sc-1wmcwsa-1\"\n})([\"height:230px;width:265px;\"]);\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Exercise);\n\n//# sourceURL=webpack://fec/./client/src/components/Exercise.jsx?");
 
 /***/ }),
 
@@ -442,7 +442,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ \"./node_modules/styled-components/dist/styled-components.browser.esm.js\");\n\n\nvar axios = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n\n\n\nvar MuscleHeaders = function MuscleHeaders(_ref) {\n  var currentMuscle = _ref.currentMuscle,\n      setCurrentMuscle = _ref.setCurrentMuscle;\n\n  var clickMuscle = function clickMuscle(name) {\n    console.log(name);\n    setCurrentMuscle(name); // console.log('currentMuscle: ', currentMuscle);\n  };\n\n  var checkState = function checkState() {\n    console.log('currentMuscle: ', currentMuscle);\n  };\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(HeadersDiv, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", {\n    onClick: function onClick() {\n      return clickMuscle('chest');\n    }\n  }, \"Chest\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", {\n    onClick: function onClick() {\n      return clickMuscle('back');\n    }\n  }, \"Back\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", {\n    onClick: function onClick() {\n      return clickMuscle('upper legs');\n    }\n  }, \"Legs\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", {\n    onClick: function onClick() {\n      return clickMuscle('shoulders');\n    }\n  }, \"Shoulders\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", {\n    onClick: function onClick() {\n      return clickMuscle('upper arms');\n    }\n  }, \"Arms\"));\n};\n\nvar HeadersDiv = styled_components__WEBPACK_IMPORTED_MODULE_1__[\"default\"].div.withConfig({\n  displayName: \"MuscleHeaders__HeadersDiv\",\n  componentId: \"sc-1f9mm1p-0\"\n})([\"display:flex;justify-content:space-around;align-items:center;\"]);\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MuscleHeaders);\n\n//# sourceURL=webpack://fec/./client/src/components/MuscleHeaders.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ \"./node_modules/styled-components/dist/styled-components.browser.esm.js\");\n\n\nvar axios = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n\n\n\nvar MuscleHeaders = function MuscleHeaders(_ref) {\n  var currentMuscle = _ref.currentMuscle,\n      setCurrentMuscle = _ref.setCurrentMuscle;\n\n  var clickMuscle = function clickMuscle(name) {\n    console.log(name);\n    setCurrentMuscle(name); // console.log('currentMuscle: ', currentMuscle);\n  };\n\n  var checkState = function checkState() {\n    console.log('currentMuscle: ', currentMuscle);\n  };\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(HeadersDiv, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", {\n    onClick: function onClick() {\n      return clickMuscle('chest');\n    }\n  }, \"Chest\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", {\n    onClick: function onClick() {\n      return clickMuscle('back');\n    }\n  }, \"Back\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", {\n    onClick: function onClick() {\n      return clickMuscle('upper legs');\n    }\n  }, \"Legs\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", {\n    onClick: function onClick() {\n      return clickMuscle('shoulders');\n    }\n  }, \"Shoulders\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", {\n    onClick: function onClick() {\n      return clickMuscle('upper arms');\n    }\n  }, \"Arms\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"h2\", {\n    onClick: function onClick() {\n      return clickMuscle('waist');\n    }\n  }, \"Core\"));\n};\n\nvar HeadersDiv = styled_components__WEBPACK_IMPORTED_MODULE_1__[\"default\"].div.withConfig({\n  displayName: \"MuscleHeaders__HeadersDiv\",\n  componentId: \"sc-1f9mm1p-0\"\n})([\"display:flex;justify-content:space-around;align-items:center;\"]);\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MuscleHeaders);\n\n//# sourceURL=webpack://fec/./client/src/components/MuscleHeaders.jsx?");
 
 /***/ }),
 
@@ -454,6 +454,116 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var _components_App_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/App.jsx */ \"./client/src/components/App.jsx\");\n\n\n\nvar root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(document.getElementById('root'));\nroot.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_App_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null));\n\n//# sourceURL=webpack://fec/./client/src/index.jsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/images/biceps.png":
+/*!*************************************************!*\
+  !*** ./client/src/components/images/biceps.png ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"daf3539a999dd449584085a2381f4f42.png\");\n\n//# sourceURL=webpack://fec/./client/src/components/images/biceps.png?");
+
+/***/ }),
+
+/***/ "./client/src/components/images/chest.png":
+/*!************************************************!*\
+  !*** ./client/src/components/images/chest.png ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"17e425bf2188cb8ef2776e188d1a443f.png\");\n\n//# sourceURL=webpack://fec/./client/src/components/images/chest.png?");
+
+/***/ }),
+
+/***/ "./client/src/components/images/glutes.png":
+/*!*************************************************!*\
+  !*** ./client/src/components/images/glutes.png ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"ba2faf3d7a5d3eaf2e9e0ef312b3e860.png\");\n\n//# sourceURL=webpack://fec/./client/src/components/images/glutes.png?");
+
+/***/ }),
+
+/***/ "./client/src/components/images/hamstrings.png":
+/*!*****************************************************!*\
+  !*** ./client/src/components/images/hamstrings.png ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"c0d67cadd9d500a3c83b04ee0a295e42.png\");\n\n//# sourceURL=webpack://fec/./client/src/components/images/hamstrings.png?");
+
+/***/ }),
+
+/***/ "./client/src/components/images/lats.png":
+/*!***********************************************!*\
+  !*** ./client/src/components/images/lats.png ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"4477120871220a8bed8ec87c2e286a41.png\");\n\n//# sourceURL=webpack://fec/./client/src/components/images/lats.png?");
+
+/***/ }),
+
+/***/ "./client/src/components/images/quads.png":
+/*!************************************************!*\
+  !*** ./client/src/components/images/quads.png ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"93de1b160dc008c92623c14cbfdb387c.png\");\n\n//# sourceURL=webpack://fec/./client/src/components/images/quads.png?");
+
+/***/ }),
+
+/***/ "./client/src/components/images/shoulders.png":
+/*!****************************************************!*\
+  !*** ./client/src/components/images/shoulders.png ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"c548d989811e8c4d206b763b29d0327c.png\");\n\n//# sourceURL=webpack://fec/./client/src/components/images/shoulders.png?");
+
+/***/ }),
+
+/***/ "./client/src/components/images/traps.png":
+/*!************************************************!*\
+  !*** ./client/src/components/images/traps.png ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"008002a5edd073964a045b3fce7f4753.png\");\n\n//# sourceURL=webpack://fec/./client/src/components/images/traps.png?");
+
+/***/ }),
+
+/***/ "./client/src/components/images/triceps.png":
+/*!**************************************************!*\
+  !*** ./client/src/components/images/triceps.png ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"e369bd75db87abf7e82f58e3aec8b919.png\");\n\n//# sourceURL=webpack://fec/./client/src/components/images/triceps.png?");
+
+/***/ }),
+
+/***/ "./client/src/components/images/waist.png":
+/*!************************************************!*\
+  !*** ./client/src/components/images/waist.png ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"37d738e61d11eae16591fc11d1300f61.png\");\n\n//# sourceURL=webpack://fec/./client/src/components/images/waist.png?");
 
 /***/ }),
 
@@ -664,6 +774,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -687,6 +809,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

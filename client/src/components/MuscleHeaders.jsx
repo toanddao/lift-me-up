@@ -22,6 +22,7 @@ const MuscleHeaders = ( {currentMuscle, setCurrentMuscle}) => {
       <h2 onClick={() => clickMuscle('upper legs')}>Legs</h2>
       <h2 onClick={() => clickMuscle('shoulders')}>Shoulders</h2>
       <h2 onClick={() => clickMuscle('upper arms')}>Arms</h2>
+      <h2 onClick={() => clickMuscle('waist')}>Core</h2>
       {/* <button onClick={checkState}>State</button> */}
     </HeadersDiv>
   )
