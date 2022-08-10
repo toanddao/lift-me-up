@@ -33,7 +33,15 @@ exports.getExercises = (req, res) => {
   });
 }
 
-
+exports.generateWorkout = (req, res) => {
+  models.generateWorkout()
+  .then((response) => {
+    res.send(response);
+  })
+  .catch((error) => {
+    console.log('error generating workout', error);
+  });
+}
 
 
 

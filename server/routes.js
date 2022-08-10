@@ -3,6 +3,6 @@ const controllers = require('./controllers.js');
 
 router.get('/workout', controllers.saveExerciseInfo);
 router.get('/exercise', controllers.getExercises);
-// router.get('/images', controllers.getExerciseInfo);
+router.get('/generate', controllers.generateWorkout);
 
 module.exports = router;

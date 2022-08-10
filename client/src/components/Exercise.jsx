@@ -11,7 +11,7 @@ import triceps from './images/triceps.png';
 import waist from './images/waist.png';
 import biceps from './images/biceps.png';
 
-const Exercise = ({ exercise }) => {
+const Exercise = ({ exercise, addExercise }) => {
   const [showTutorial, setShowTutorail] = useState(false);
 
   let muscle;
@@ -57,7 +57,7 @@ const Exercise = ({ exercise }) => {
         {showTutorial ? <Photo src={exercise.gifUrl}></Photo> : <Photo src={muscle}></Photo>}
         <div>Equipment: {exercise.equipment}</div>
         <button onClick={() => toggleTutorial()}>{showTutorial ? 'Exit Tutorial' : 'Show Tutorial'}</button>
-        <button>Add to Workout</button>
+        <button onClick={() => addExercise(exercise.id)}>Add to Workout</button>
       </ExerciseInfo>
     </div>
   )

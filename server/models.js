@@ -22,6 +22,10 @@ exports.getExercises = (muscle) => {
   .exec()
 }
 
+exports.generateWorkout = () => {
+  return Exercise.aggregate([{ $sample: {size: 5}}])
+}
+
 // db.exercises.aggregate([{$match: {bodyPart:'chest'}}, { $sample: {size: 10}}])
 //  db.exercises.aggregate([{ $sample: {size: 10}}])
 
