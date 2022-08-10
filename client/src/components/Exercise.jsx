@@ -12,6 +12,7 @@ import waist from './images/waist.png';
 import biceps from './images/biceps.png';
 
 const Exercise = ({ exercise }) => {
+  const [showTutorial, setShowTutorail] = useState(false);
 
   let muscle;
   if (exercise.bodyPart === 'chest') {
@@ -36,21 +37,40 @@ const Exercise = ({ exercise }) => {
     muscle = traps;
   }
 
+  const toggleTutorial = () => {
+    // if (status === 'true') {
+    //   setShowTutorail(true);
+    // } else {
+    //   setShowTutorail(false);
+    // }
+    let status = showTutorial;
+    setShowTutorail(!status);
+  }
 
   return (
     <div>
+      {/* {showTutorial ? <div><button onClick={() => toggleTutorial('false')} >EXIT TUTORIAL</button><TutorialGif src={exercise.gifUrl}></TutorialGif></div> : null} */}
       <ExerciseInfo>
         <div>{exercise.name}</div>
         {/* <img src={exercise.gifUrl}></img> */}
         <div>Target Muscle: {exercise.target}</div>
-        <Photo src={muscle}></Photo>
+        {showTutorial ? <Photo src={exercise.gifUrl}></Photo> : <Photo src={muscle}></Photo>}
         <div>Equipment: {exercise.equipment}</div>
-        <button>Show Tutorial</button>
+        <button onClick={() => toggleTutorial()}>{showTutorial ? 'Exit Tutorial' : 'Show Tutorial'}</button>
         <button>Add to Workout</button>
       </ExerciseInfo>
     </div>
   )
 }
+
+const TutorialGif = styled.img`
+position: absolute;
+z-index: 2;
+top: 500px;
+left: 450px;
+height: 400px;
+width: 400px
+`
 
 const ExerciseInfo = styled.div`
 position: relative;
