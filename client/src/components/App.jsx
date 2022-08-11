@@ -57,16 +57,39 @@ const App = () => {
   }
 
   return (
-    <div>
-      <h1 onClick={() => toggleWorkout('false')}>
+    <Container>
+      <Logo onClick={() => toggleWorkout('false')}>
         Lift Me Up!
-      </h1>
-      <h2 onClick={() => toggleWorkout('true')}>My Workout</h2>
-      <h2 onClick={generateWorkout}>Generate Workout</h2>
+      </Logo>
+      <WorkoutTitles>
+        <h2 onClick={() => toggleWorkout('true')}>My Workout</h2>
+        <h2 onClick={generateWorkout}>Generate Workout</h2>
+      </WorkoutTitles>
       <MuscleHeaders currentMuscle={currentMuscle} setCurrentMuscle={setCurrentMuscle} toggleWorkout={toggleWorkout}/>
       {seeWorkout ? <MyWorkout workoutList={workoutList} /> : <ExerciseList exerciseList={exerciseList} addExercise={addExercise}/>}
-    </div>
+    </Container>
   )
 }
+
+const Logo = styled.h1`
+margin: -8px 10px 10px 0px;
+padding-left: 10px;
+padding-top: 8px;
+padding-bottom: 8px;
+background-image: linear-gradient(to right,#575b5442,#e6feff);
+font-family: 'Bebas Neue';
+`
+
+const WorkoutTitles = styled.div`
+font-family: 'Source Sans Pro', sans-serif;
+padding-left: 10px;
+display: flex;
+justify-content: space-between;
+`
+
+const Container = styled.div`
+width: 80%;
+margin: auto;
+`
 
 export default App;

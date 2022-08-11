@@ -13,6 +13,7 @@ import biceps from './images/biceps.png';
 
 const Exercise = ({ exercise, addExercise }) => {
   const [showTutorial, setShowTutorail] = useState(false);
+  const [exerciseName, setExerciseName] = useState('');
 
   let muscle;
   if (exercise.bodyPart === 'chest') {
@@ -37,31 +38,74 @@ const Exercise = ({ exercise, addExercise }) => {
     muscle = traps;
   }
 
+  const capitalize = (strings) => {
+    let words = strings.split(' ');
+    for (var i = 0; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].substring(1);
+    }
+    return  words.join(' ');
+  }
+
   const toggleTutorial = () => {
-    // if (status === 'true') {
-    //   setShowTutorail(true);
-    // } else {
-    //   setShowTutorail(false);
-    // }
     let status = showTutorial;
     setShowTutorail(!status);
   }
 
   return (
     <div>
-      {/* {showTutorial ? <div><button onClick={() => toggleTutorial('false')} >EXIT TUTORIAL</button><TutorialGif src={exercise.gifUrl}></TutorialGif></div> : null} */}
       <ExerciseInfo>
-        <div>{exercise.name}</div>
-        {/* <img src={exercise.gifUrl}></img> */}
-        <div>Target Muscle: {exercise.target}</div>
+        <ExerciseName>{capitalize(exercise.name)}</ExerciseName>
         {showTutorial ? <Photo src={exercise.gifUrl}></Photo> : <Photo src={muscle}></Photo>}
-        <div>Equipment: {exercise.equipment}</div>
-        <button onClick={() => toggleTutorial()}>{showTutorial ? 'Exit Tutorial' : 'Show Tutorial'}</button>
-        <button onClick={() => addExercise(exercise.id)}>Add to Workout</button>
+        <SecondaryInfo>Target Muscle: {capitalize(exercise.target)}</SecondaryInfo>
+        <SecondaryInfo>Equipment: {capitalize(exercise.equipment)}</SecondaryInfo>
+        <TutorialButton onClick={() => toggleTutorial()}>{showTutorial ? 'Exit Tutorial' : 'Show Tutorial'}</TutorialButton>
+        {/* <button onClick={() => addExercise(exercise.id)}>Add to Workout</button> */}
       </ExerciseInfo>
     </div>
   )
 }
+
+const TutorialButton = styled.button`
+background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+border-radius: .5rem;
+box-sizing: border-box;
+color: #FFFFFF;
+display: flex;
+font-size: 16px;
+justify-content: center;
+// padding: 0.5rem 1.75rem;
+padding: 8px;
+margin-top: 10px;
+margin-left: 25px;
+text-decoration: none;
+width: 220px;
+border: 0;
+cursor: pointer;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+
+&:hover {
+  // background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+  background-image: linear-gradient(209deg,#148dc1d4 0%,#147ba6 100%);
+}
+`
+
+const SecondaryInfo = styled.div`
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #838383d4;
+  margin: 5px 20px 5px 8px;
+  text-align: center;
+`
+
+const ExerciseName = styled.div`
+  height: 50px;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  margin: 10px 10px 5px 8px;
+`
 
 const TutorialGif = styled.img`
 position: absolute;

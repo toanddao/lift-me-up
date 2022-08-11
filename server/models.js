@@ -18,6 +18,7 @@ exports.save = (exercise) => {
 
 exports.getExercises = (muscle) => {
   return Exercise.find({bodyPart: muscle})
+  // return Exercise.aggregate([{$match: {bodyPart: muscle}}, { $sample: {size: 12}}])
   .limit(12)
   .exec()
 }
