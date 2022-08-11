@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 const axios = require('axios');
 import styled from 'styled-components';
 
-const MuscleHeaders = ( {currentMuscle, setCurrentMuscle}) => {
+const MuscleHeaders = ( {currentMuscle, setCurrentMuscle, toggleWorkout}) => {
 
   const clickMuscle = (name) => {
     console.log(name);
@@ -16,7 +16,7 @@ const MuscleHeaders = ( {currentMuscle, setCurrentMuscle}) => {
 
 
   return (
-    <HeadersDiv>
+    <HeadersDiv onClick={() => toggleWorkout('false')}>
       <h2 onClick={() => clickMuscle('chest')}>Chest</h2>
       <h2 onClick={() => clickMuscle('back')}>Back</h2>
       <h2 onClick={() => clickMuscle('upper legs')}>Legs</h2>

@@ -63,7 +63,7 @@ const App = () => {
       </h1>
       <h2 onClick={() => toggleWorkout('true')}>My Workout</h2>
       <h2 onClick={generateWorkout}>Generate Workout</h2>
-      <MuscleHeaders currentMuscle={currentMuscle} setCurrentMuscle={setCurrentMuscle}/>
+      <MuscleHeaders currentMuscle={currentMuscle} setCurrentMuscle={setCurrentMuscle} toggleWorkout={toggleWorkout}/>
       {seeWorkout ? <MyWorkout workoutList={workoutList} /> : <ExerciseList exerciseList={exerciseList} addExercise={addExercise}/>}
     </div>
   )
