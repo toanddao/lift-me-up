@@ -21,6 +21,11 @@ const App = () => {
     }
   }
 
+  const removeExercise = (exerciseId) => {
+    const newList = workoutList.filter((item) => item !== exerciseId);
+    setWorkoutList([...newList])
+  }
+
   useEffect(() => {
     axios.get('liftmeup/generate', { params: { amount: 12}})
     .then((response) => {
@@ -71,25 +76,25 @@ const App = () => {
   return (
     <Container>
       <Logo onClick={() => toggleWorkout('false')}>
-        Lift Me Up!
+        Lift Me Up
       </Logo>
       <WorkoutTitles>
         <h2 onClick={() => toggleWorkout('true')}>My Workout</h2>
         <h2 onClick={generateWorkout}>Generate Workout</h2>
       </WorkoutTitles>
       <MuscleHeaders currentMuscle={currentMuscle} setCurrentMuscle={setCurrentMuscle} toggleWorkout={toggleWorkout}/>
-      {seeWorkout ? <MyWorkout workoutList={workoutList} /> : <ExerciseList exerciseList={exerciseList} addExercise={addExercise}/>}
+      {seeWorkout ? <MyWorkout workoutList={workoutList} removeExercise={removeExercise}/> : <ExerciseList exerciseList={exerciseList} addExercise={addExercise} removeExercise={removeExercise}/>}
     </Container>
   )
 }
 
 const Logo = styled.h1`
-margin: -8px 10px 10px 0px;
+margin: -8px 0px 10px 0px;
 padding-left: 10px;
 padding-top: 8px;
 padding-bottom: 8px;
-background-image: linear-gradient(to right,#575b5442,#e6feff);
-font-family: 'Bebas Neue';
+background-image: linear-gradient(to right,#64646433,#6464648f);
+font-family: 'Rubik Dirt', cursive;
 `
 
 const WorkoutTitles = styled.div`

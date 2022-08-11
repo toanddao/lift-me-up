@@ -13,7 +13,7 @@ import triceps from './images/triceps.png';
 import waist from './images/waist.png';
 import biceps from './images/biceps.png';
 
-const Workout = ({ exerciseId }) => {
+const Workout = ({ exerciseId, removeExercise }) => {
   const [showTutorial, setShowTutorail] = useState(false);
   const [exercise, setExercise] = useState({});
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -82,7 +82,7 @@ const Workout = ({ exerciseId }) => {
         <SecondaryInfo>Target Muscle: {capitalize(exercise.target)}</SecondaryInfo>
         <SecondaryInfo>Equipment: {capitalize(exercise.equipment)}</SecondaryInfo>
         <TutorialButton onClick={() => toggleTutorial()}>{showTutorial ? 'Exit Tutorial' : 'Show Tutorial'}</TutorialButton>
-        <Remove ></Remove>
+        <Remove onClick={() => removeExercise(exercise.id)}></Remove>
       </ExerciseInfo>}
     </div>
   )

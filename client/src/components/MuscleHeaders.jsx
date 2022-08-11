@@ -30,18 +30,25 @@ const MuscleHeaders = ( {currentMuscle, setCurrentMuscle, toggleWorkout}) => {
 
 const Title = styled.h2`
 font-family: 'Source Sans Pro', sans-serif;
-border: 1px solid;
-border-radius: 10px;
+// border: 1px solid;
+// border-radius: 10px;
 margin-right: 10px;
 width: 150px;
-padding-top: 10px;
-padding-bottom: 10px;
+// padding-top: 10px;
+// padding-bottom: 10px;
 text-align: center;
-// color: ##e6feffa3;
+color: black;
 cursor: pointer;
+
+&:hover {
+  color: white;
+
 `
 
 const HeadersDiv = styled.div`
+background-image: linear-gradient(to right,#64646433,#6464648f);
+// border: 1px solid;
+// border-radius: 10px;
 display: flex;
 justify-content: space-around;
 align-items: center;

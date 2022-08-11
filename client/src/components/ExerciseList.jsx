@@ -3,7 +3,7 @@ import Exercise from './Exercise.jsx';
 import styled from 'styled-components';
 const axios = require('axios');
 
-const ExerciseList = ({ exerciseList, addExercise }) => {
+const ExerciseList = ({ exerciseList, addExercise, removeExercise }) => {
 
 
 
@@ -11,7 +11,7 @@ const ExerciseList = ({ exerciseList, addExercise }) => {
     <div>
       <ExerciseDiv>
         {exerciseList.map((item, index) => (
-          <Exercise exercise={item} key={index} addExercise={addExercise}/>
+          <Exercise exercise={item} key={index} addExercise={addExercise} removeExercise={removeExercise}/>
         ))}
       </ExerciseDiv>
     </div>

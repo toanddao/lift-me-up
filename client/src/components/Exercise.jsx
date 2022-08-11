@@ -12,7 +12,7 @@ import triceps from './images/triceps.png';
 import waist from './images/waist.png';
 import biceps from './images/biceps.png';
 
-const Exercise = ({ exercise, addExercise }) => {
+const Exercise = ({ exercise, addExercise, removeExercise }) => {
   const [showTutorial, setShowTutorail] = useState(false);
   const [exerciseName, setExerciseName] = useState('');
   const [addStatus, setAddStatus] = useState(true);
@@ -66,16 +66,22 @@ const Exercise = ({ exercise, addExercise }) => {
     <div>
       <ExerciseInfo>
         <ExerciseName>{capitalize(exercise.name)}</ExerciseName>
-        {showTutorial ? <Photo src={exercise.gifUrl}></Photo> : <Photo src={muscle}></Photo>}
+        {showTutorial ? <ExerciseGif src={exercise.gifUrl}></ExerciseGif> : <Photo src={muscle}></Photo>}
         <SecondaryInfo>Target Muscle: {capitalize(exercise.target)}</SecondaryInfo>
         <SecondaryInfo>Equipment: {capitalize(exercise.equipment)}</SecondaryInfo>
         <TutorialButton onClick={() => toggleTutorial()}>{showTutorial ? 'Exit Tutorial' : 'Show Tutorial'}</TutorialButton>
-        {addStatus? <Add onClick={() => {addExercise(exercise.id); toggleStatus('false');}} ></Add> : <Remove onClick={() => {addExercise(exercise.id); toggleStatus('true');}} ></Remove>}
+        {addStatus? <Add onClick={() => {addExercise(exercise.id); toggleStatus('false');}} ></Add> : <Remove onClick={() => {removeExercise(exercise.id); toggleStatus('true');}} ></Remove>}
         {/* <button onClick={() => addExercise(exercise.id)}>Add to Workout</button> */}
       </ExerciseInfo>
     </div>
   )
 }
+
+const ExerciseGif = styled.img`
+height: 230px;
+width: 265px;
+margin-left: 35px;
+`
 
 const TutorialButton = styled.button`
 background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
@@ -155,15 +161,6 @@ const ExerciseName = styled.div`
   margin: 10px 10px 5px 8px;
 `
 
-const TutorialGif = styled.img`
-position: absolute;
-z-index: 2;
-top: 500px;
-left: 450px;
-height: 400px;
-width: 400px
-`
-
 const ExerciseInfo = styled.div`
 position: relative;
 height: 400px;
@@ -186,5 +183,3 @@ margin-left: 35px;
 `
 
 export default Exercise;
-
-//aaron kevin brandon theresa jennifer pan
