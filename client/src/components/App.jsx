@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MuscleHeaders from './MuscleHeaders.jsx';
 import ExerciseList from './ExerciseList.jsx';
+import MyWorkout from './MyWorkout.jsx';
 import styled from 'styled-components';
 const axios = require('axios');
 
@@ -10,6 +11,7 @@ const App = () => {
   const [exerciseList, setExerciseList] = useState([]);
   const [currentMuscle, setCurrentMuscle] = useState('');
   const [workoutList, setWorkoutList] = useState([]);
+  const [seeWorkout, setSeeWorkout] = useState(false);
 
 
   const addExercise = (exerciseId) => {
@@ -46,15 +48,23 @@ const App = () => {
     })
   }
 
+    const toggleWorkout = (status) => {
+    if (status === 'true') {
+      setSeeWorkout(true);
+    } else {
+      setSeeWorkout(false);
+    }
+  }
+
   return (
     <div>
-      <h1 onClick={checkState}>
+      <h1 onClick={() => toggleWorkout('false')}>
         Lift Me Up!
       </h1>
-      <h2>My Workout</h2>
+      <h2 onClick={() => toggleWorkout('true')}>My Workout</h2>
       <h2 onClick={generateWorkout}>Generate Workout</h2>
       <MuscleHeaders currentMuscle={currentMuscle} setCurrentMuscle={setCurrentMuscle}/>
-      <ExerciseList exerciseList={exerciseList} addExercise={addExercise}/>
+      {seeWorkout ? <MyWorkout workoutList={workoutList} /> : <ExerciseList exerciseList={exerciseList} addExercise={addExercise}/>}
     </div>
   )
 }

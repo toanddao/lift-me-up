@@ -21,8 +21,14 @@ exports.saveExerciseInfo = (req, res) => {
 }
 
 exports.getExercises = (req, res) => {
-  // console.log('req from client: ', req.query.bodyPart);
+  console.log('req from client: ', req.query.bodyPart);
   let muscle = req.query.bodyPart;
+  // let muscle;
+  // if (req.query.bodyPart) {
+  //   muscle = req.query.bodyPart
+  // } else {
+  //   muscle = req.query.id
+  // }
   models.getExercises(muscle)
   .then((response) => {
     // console.log('get exercise info :', response);
@@ -30,6 +36,19 @@ exports.getExercises = (req, res) => {
   })
   .catch((error) => {
     console.log('error getting exercises', error);
+  });
+}
+
+exports.findExercise = (req, res) => {
+  console.log('req from client: ', req.query);
+  let exerciseId = req.query.id;
+  models.findExercise(exerciseId)
+  .then((response) => {
+    console.log('find exercise response', response)
+    res.send(response);
+  })
+  .catch((error) => {
+    console.log('error finding exercises', error);
   });
 }
 

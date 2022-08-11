@@ -22,6 +22,10 @@ exports.getExercises = (muscle) => {
   .exec()
 }
 
+exports.findExercise = (exerciseId) => {
+  return Exercise.find({id: exerciseId});
+}
+
 exports.generateWorkout = () => {
   return Exercise.aggregate([{ $sample: {size: 5}}])
 }
