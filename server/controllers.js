@@ -53,7 +53,8 @@ exports.findExercise = (req, res) => {
 }
 
 exports.generateWorkout = (req, res) => {
-  models.generateWorkout()
+  let amount = req.query.amount || 5;
+  models.generateWorkout(amount)
   .then((response) => {
     res.send(response);
   })

@@ -37,7 +37,8 @@ width: 150px;
 padding-top: 10px;
 padding-bottom: 10px;
 text-align: center;
-color: ##e6feffa3;
+// color: ##e6feffa3;
+cursor: pointer;
 `
 
 const HeadersDiv = styled.div`

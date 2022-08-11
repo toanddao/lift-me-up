@@ -27,8 +27,9 @@ exports.findExercise = (exerciseId) => {
   return Exercise.find({id: exerciseId});
 }
 
-exports.generateWorkout = () => {
-  return Exercise.aggregate([{ $sample: {size: 5}}])
+exports.generateWorkout = (amount) => {
+  amount = Number(amount);
+  return Exercise.aggregate([{ $sample: {size: amount}}])
 }
 
 // db.exercises.aggregate([{$match: {bodyPart:'chest'}}, { $sample: {size: 10}}])

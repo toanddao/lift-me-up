@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { FiPlus, FiMinus } from 'react-icons/fi'
 import shoulders from './images/shoulders.png';
 import chest from './images/chest.png';
 import glutes from './images/glutes.png';
@@ -14,6 +15,7 @@ import biceps from './images/biceps.png';
 const Exercise = ({ exercise, addExercise }) => {
   const [showTutorial, setShowTutorail] = useState(false);
   const [exerciseName, setExerciseName] = useState('');
+  const [addStatus, setAddStatus] = useState(true);
 
   let muscle;
   if (exercise.bodyPart === 'chest') {
@@ -51,6 +53,15 @@ const Exercise = ({ exercise, addExercise }) => {
     setShowTutorail(!status);
   }
 
+  const toggleStatus = (status) => {
+    if (status === 'true') {
+      setAddStatus(true);
+    } else {
+      setAddStatus(false);
+      console.log('TOGGLE STATUS WORKED')
+    }
+  }
+
   return (
     <div>
       <ExerciseInfo>
@@ -59,6 +70,7 @@ const Exercise = ({ exercise, addExercise }) => {
         <SecondaryInfo>Target Muscle: {capitalize(exercise.target)}</SecondaryInfo>
         <SecondaryInfo>Equipment: {capitalize(exercise.equipment)}</SecondaryInfo>
         <TutorialButton onClick={() => toggleTutorial()}>{showTutorial ? 'Exit Tutorial' : 'Show Tutorial'}</TutorialButton>
+        {addStatus? <Add onClick={() => {addExercise(exercise.id); toggleStatus('false');}} ></Add> : <Remove onClick={() => {addExercise(exercise.id); toggleStatus('true');}} ></Remove>}
         {/* <button onClick={() => addExercise(exercise.id)}>Add to Workout</button> */}
       </ExerciseInfo>
     </div>
@@ -76,9 +88,9 @@ justify-content: center;
 // padding: 0.5rem 1.75rem;
 padding: 8px;
 margin-top: 10px;
-margin-left: 25px;
+margin-left: 16px;
 text-decoration: none;
-width: 220px;
+width: 258px;
 border: 0;
 cursor: pointer;
 user-select: none;
@@ -89,6 +101,42 @@ touch-action: manipulation;
   // background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
   background-image: linear-gradient(209deg,#148dc1d4 0%,#147ba6 100%);
 }
+`
+
+const Remove = styled(FiMinus)`
+position: absolute;
+top: 357px;
+right: 10px;
+height: 32px;
+width: 32px;
+color: #FFFFFF;
+box-sizing: border-box;
+background-image: linear-gradient(127deg,#ed1414 0%,#ad0303e0 100%);
+border-radius: .5rem;
+cursor: pointer;
+touch-action: manipulation;
+
+&:hover {
+  background-image: linear-gradient(215deg,#dd1c1c 0%,#f54d4de0 100%);
+
+`
+
+const Add = styled(FiPlus)`
+position: absolute;
+top: 357px;
+right: 10px;
+height: 32px;
+width: 32px;
+color: #FFFFFF;
+box-sizing: border-box;
+background-image: linear-gradient(127deg,#2ff475 0%,#1cb514e0 100%);
+border-radius: .5rem;
+cursor: pointer;
+touch-action: manipulation;
+
+&:hover {
+  background-image: linear-gradient(179deg,#03bb45 0%,#2ab223e0 100%);
+
 `
 
 const SecondaryInfo = styled.div`
@@ -119,7 +167,7 @@ width: 400px
 const ExerciseInfo = styled.div`
 position: relative;
 height: 400px;
-width: 270px;
+width: 330px;
 display: block;
 align-items: center;
 border: 2px solid lightgray;
@@ -134,6 +182,9 @@ border-radius: 10px;
 const Photo = styled.img`
 height: 230px;
 width: 265px;
+margin-left: 35px;
 `
 
 export default Exercise;
+
+//aaron kevin brandon theresa jennifer pan

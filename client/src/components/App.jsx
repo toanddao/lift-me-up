@@ -22,6 +22,18 @@ const App = () => {
   }
 
   useEffect(() => {
+    axios.get('liftmeup/generate', { params: { amount: 12}})
+    .then((response) => {
+      console.log('response for get upon render: ', response.data);
+      setExerciseList(response.data)
+    })
+    .catch((err) => {
+      console.error(err)
+    })
+  }, [])
+
+
+  useEffect(() => {
     axios.get('liftmeup/exercise', { params: { bodyPart: currentMuscle}})
     .then((response) => {
       console.log('response for get: ', response.data);
@@ -85,6 +97,7 @@ font-family: 'Source Sans Pro', sans-serif;
 padding-left: 10px;
 display: flex;
 justify-content: space-between;
+cursor: pointer;
 `
 
 const Container = styled.div`
